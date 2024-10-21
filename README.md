@@ -1,12 +1,12 @@
 #include <msp430.h>
-#define RED_LED BITO // P1.0
+#define RED_LED BIT0 // P1.0
 #define BUTTON1 BIT1 //push button P4.1
 void main(void)
 
 {
 WDTCTL = WDTPW | WDTHOLD;
-P1OUT &= ~BITO;
-P1DIR |= BITO;
+P1OUT &= ~BIT0;
+P1DIR |= BIT0;
 
 P4DIR &= ~BIT1;
 P4REN |= BIT1;
